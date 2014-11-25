@@ -4,9 +4,10 @@ group :production do
   gem 'rails_12factor'
 end
 
-group :development do
+group :development, :test do
   gem "better_errors"
   gem "binding_of_caller"
+  gem 'rspec-rails', '~> 3.0'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

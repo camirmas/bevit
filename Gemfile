@@ -1,5 +1,13 @@
 source 'https://rubygems.org'
 
+group :production do
+  gem 'rails_12factor'
+end
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
@@ -38,3 +46,5 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# bootstrap
+gem 'bootstrap-sass', '~> 3.3.1'

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :drinks
   get 'categories' => "drinks#categories"
+  get 'cabinet' => "drinks#cabinet"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

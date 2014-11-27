@@ -11,9 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20141127033706) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "drinks", force: true do |t|
+    t.string   "name"
+    t.string   "glass"
+    t.string   "category"
+    t.text     "ingredients",         default: [], array: true
+    t.text     "amounts",             default: [], array: true
+    t.string   "garnish"
+    t.text     "preparation"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "special_ingredients", default: [], array: true
+  end
 
 end

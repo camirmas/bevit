@@ -2,7 +2,7 @@ class DrinksController < ApplicationController
   before_action :set_drink, only: [:show, :edit, :update, :destroy]
 
   def index
-    @drinks = Drink.all
+    @drinks = Drink.all.order(:name)
   end
 
   def show

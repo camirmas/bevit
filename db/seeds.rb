@@ -9,10 +9,15 @@
 json = File.read("app/assets/javascripts/iba-cocktails/recipes.json")
 data = JSON.parse(json)
 
+def get_items(drink, item)
+  drink["ingredients"].select { |ing| ing.has_key?(item) }.map { |ing| ing[item] }
+end
+
 data.each do |drink|
-  ingredient_names = drink["ingredients"].select { |ing| ing.has_key?("ingredient") }.map { |ing| ing["ingredient"] }
-  ingredient_amounts = drink["ingredients"].select { |ing| ing.has_key?("cl") }.map { |ing| ing["cl"] }
-  special_ingredients = drink["ingredients"].select { |ing| ing.has_key?("special") }.map { |ing| ing["special"] }
+  ingredient_names = get_items(drink, "ingredient")
+  ingredient_amounts = get_items(drink, "cl")
+  special_ingredients = get_items(drink, "special")
+
   Drink.create(
     name: drink["name"],
     glass: drink["glass"],

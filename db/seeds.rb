@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-json = File.read("app/assets/javascripts/iba-cocktails/recipes.json")
+json = File.read("app/assets/javascripts/recipes.json")
 data = JSON.parse(json)
 
 def get_items(drink, item)

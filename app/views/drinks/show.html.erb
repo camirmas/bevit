@@ -1,1 +1,24 @@
 <h1 class="page-header"><%= @drink.name %></h1>
+<dl class="drink-desc">
+  <dt>Glass: </dt>
+  <dd><%= @drink.glass.capitalize %></dd>
+  <dt>Category: </dt>
+  <dd><%= @drink.category ? @drink.category : "None" %></dd>
+  <dt>
+    Ingredients:
+  </dt>
+  <dl class="dl-horizontal">
+    <% @drink.ingredients.each_with_index do |item, i| %>
+      <dt><%= item %></dt>
+      <dd><%= @drink.amounts[i] %>cL</dd>
+    <% end %>
+    <% @drink.special_ingredients.each do |item| %>
+      <dt>Special</dt>
+      <dd><%= item %></dd>
+    <% end %>
+  </dl>
+  <dt>Garnish: </dt>
+  <dd><%= @drink.garnish ? @drink.garnish : "None" %></dd>
+  <dt>Preparation: </dt>
+  <dd><%= @drink.preparation %></dd>
+</dl>

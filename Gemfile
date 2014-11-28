@@ -8,6 +8,7 @@ group :development, :test do
   gem "better_errors"
   gem "binding_of_caller"
   gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl_rails'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -49,5 +50,3 @@ gem 'spring',        group: :development
 
 # bootstrap
 gem 'bootstrap-sass', '~> 3.3.1'
-
-gem 'factory_girl'

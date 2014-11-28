@@ -1,0 +1,19 @@
+<table class="table">
+  <thead>
+    <th>
+      Drink
+    </th>
+  </thead>
+  <tbody>
+    <% @drinks.each do |drink| %>
+      <tr>
+        <td>
+          <%= drink.name %>
+        </td>
+        <td>
+          <%= link_to "View Drink", drink_path(drink), class:"btn btn-info" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

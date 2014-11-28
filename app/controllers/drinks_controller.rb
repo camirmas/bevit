@@ -21,6 +21,12 @@ class DrinksController < ApplicationController
     redirect_to drinks_path
   end
 
+  def category
+    cat = params[:name].gsub("_", " ")
+    @drinks = Drink.all.where(category: cat)
+    render "filtered_category"
+  end
+
   private
 
   def set_drink

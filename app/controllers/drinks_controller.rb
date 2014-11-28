@@ -23,7 +23,7 @@ class DrinksController < ApplicationController
 
   def category
     cat = params[:name].gsub("_", " ")
-    @drinks = Drink.all.where(category: cat)
+    @drinks = Drink.all.where(category: cat).order(:name)
     render "filtered_category"
   end
 

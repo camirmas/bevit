@@ -27,6 +27,10 @@ class DrinksController < ApplicationController
     render "filtered_category"
   end
 
+  def list_by_ingredient
+    render "list_by_ingredient"
+  end
+
   private
 
   def set_drink

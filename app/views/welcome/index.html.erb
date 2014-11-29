@@ -1,1 +1,15 @@
-<h1>Welcome to Bev.it!</h1>
+<h1 class="page-header">Welcome to Bev.it!</h1>
+
+<%= form_tag(list_by_ingredient_path, method: "get", class: "form-horizontal") do %>
+  <div class="form-group">
+    <%= label_tag(:ingredients, "", class: "col-sm-1 control-label glyphicon glyphicon-search") %>
+    <div class="col-sm-10">
+      <%= text_field_tag(:ingredients, "", class: "form-control", placeholder: "Ingredients") %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-1 col-sm-10">
+      <%= submit_tag("Search", class: "btn btn-default") %>
+    </div>
+  </div>
+<% end %>

@@ -36,6 +36,15 @@ class DrinksController < ApplicationController
     render "list_by_ingredient"
   end
 
+  def list_cabinet
+    user_ing = params["ingredient"].downcase
+
+    @drinks = Drink.all.select do |drink|
+      drink.ingredients.map { |ing| ing.downcase }.include?(user_ing)
+    end
+    render "cabinet_list"
+  end
+
   private
 
   def set_drink

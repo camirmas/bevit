@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'cabinet' => "drinks#cabinet"
   get 'categories/:name' => "drinks#category", as: :category
   get 'list_by_ingredient' => "drinks#list_by_ingredient"
+  get 'cabinet' => "drinks#cabinet"
+  get 'list_cabinet' => "drinks#list_cabinet"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

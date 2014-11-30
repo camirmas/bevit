@@ -1,0 +1,16 @@
+<h1 class="page-header">Cabinet</h1>
+
+<h4 class="search-instructions col-xs-10 col-xs-offset-1">Search by an ingredient, and see all the drinks that have it. What ingredient are you interested in?</h4>
+<%= form_tag(list_cabinet_path, method: "get", class: "form-horizontal") do %>
+  <div class="form-group">
+    <%= label_tag(:ingredient, "", class: "col-xs-1 control-label glyphicon glyphicon-search") %>
+    <div class="col-xs-10">
+      <%= text_field_tag(:ingredient, "", class: "form-control", placeholder: "Example: tequila") %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-xs-offset-1 col-xs-10">
+      <%= submit_tag("Search", class: "btn btn-default") %>
+    </div>
+  </div>
+<% end %>

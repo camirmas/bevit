@@ -1,5 +1,6 @@
 class DrinksController < ApplicationController
   before_action :set_drink, only: [:show, :edit, :update, :destroy]
+  attr_reader :user_ing
 
   def index
     @drinks = Drink.all.order(:name)
@@ -28,7 +29,7 @@ class DrinksController < ApplicationController
   end
 
   def list_by_ingredient
-    user_ingredients = params["ingredients"].split(", ").map { |ing| ing.strip.downcase }
+    user_ingredients = params["ingredients"].delete(".").split(", ").map { |ing| ing.strip.downcase }
 
     @drinks = Drink.all.select do |drink|
       drink.ingredients.all? { |ing| user_ingredients.include?(ing.downcase) }
@@ -37,7 +38,7 @@ class DrinksController < ApplicationController
   end
 
   def list_cabinet
-    user_ing = params["ingredient"].strip.downcase
+    @user_ing = params["ingredient"].delete(".").strip.downcase
 
     @drinks = Drink.all.select do |drink|
       drink.ingredients.map { |ing| ing.downcase }.include?(user_ing)

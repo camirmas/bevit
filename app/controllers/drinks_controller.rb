@@ -28,6 +28,11 @@ class DrinksController < ApplicationController
   end
 
   def list_by_ingredient
+    user_ingredients = params["ingredients"].split(", ").map { |ing| ing.downcase }
+
+    @drinks = Drink.all.select do |drink|
+      drink.ingredients.all? { |ing| user_ingredients.include?(ing.downcase) }
+    end
     render "list_by_ingredient"
   end
 

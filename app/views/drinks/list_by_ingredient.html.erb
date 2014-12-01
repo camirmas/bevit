@@ -1,2 +1,11 @@
 <h1 class="page-header">Drinks</h1>
-<%= render "drinks" %>
+
+<% if !@drinks.empty? %>
+  <%= render "drinks" %>
+<% else %>
+  <h4>No drinks found! Tips:</h4>
+  <ul>
+    <li>Make sure to separate ingredients by a comma and a space.</li>
+    <li>For rum, make sure to specify 'white rum' or 'dark rum'</li>
+  </ul>
+<% end %>

@@ -4,4 +4,13 @@ Welcome to Bev.it!
 
 This application allows you to search for and to add your favorite drinks.
 
-Site coming soon!
+- See a list of all drinks
+- Search by category
+- Search by ingredient
+- Enter a list of ingredients, and see what you can make
+
+Future additions: 
+- Create a personal inventory
+- See what you can make, and what you're only x ingredients away from being able to make
+- Create drinks
+

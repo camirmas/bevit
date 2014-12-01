@@ -1,4 +1,7 @@
-<h1 class="page-header">Welcome to Bev.it!</h1>
+<div class="welcome-header text-center">
+  <h1 class="description page-header">Welcome to Bev.it!</h1>
+  <%= image_tag "Bevitlogo.png", class: "logo" %>
+</div>
 
 <h4 class="col-xs-offset-1">What ingredients do you have? <small class="text-muted">(separate with a comma and a space):</small></h3>
 
@@ -17,10 +20,14 @@
 <% end %>
 
 <div class="options col-xs-offset-1">
-  <h4 class="col-xs-11">You can also view All Drinks, search by Category, or view a Cabinet of drinks that contain a certain ingredient:</h3>
+  <h4 class="col-xs-12">You can also view All Drinks, search by Category, or view a Cabinet of drinks that contain a certain ingredient:</h3>
   <div class="options-buttons">
     <%= link_to "All Drinks", drinks_path, class: "btn btn-success" %>
     <%= link_to "Categories", categories_path, class: "btn btn-primary" %>
     <%= link_to "Cabinet", cabinet_path, class: "btn btn-info" %>
   </div>
+</div>
+
+<div class="footer">
+  <a href="https://github.com/camirmas/bevit"><%= image_tag "github.png", class: "footer-image" %></a>
 </div>

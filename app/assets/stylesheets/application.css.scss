@@ -17,6 +17,10 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+html {
+  height: 100%;
+}
+
 body {
   margin-top: 40px;
 }
@@ -36,4 +40,29 @@ body {
 .options {
   position: relative;
   right: 2%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0px;
+}
+
+.footer-image {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 9%;
+  position: relative;
+  bottom: 12px;
+  left: 10px;
+}
+
+.description {
+  display: inline-block;
+}
+
+.welcome-header {
+  margin-top: 20px;
 }

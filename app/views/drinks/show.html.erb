@@ -10,7 +10,7 @@
   <dl class="dl-horizontal">
     <% @drink.ingredients.each_with_index do |item, i| %>
       <dt><%= item %></dt>
-      <dd><%= @drink.amounts[i] %>cL</dd>
+      <dd><%= @drink.amounts[i] %>oz</dd>
     <% end %>
     <% @drink.special_ingredients.each do |item| %>
       <dt>Special</dt>

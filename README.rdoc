@@ -2,6 +2,8 @@
 
 Welcome to Bev.it!
 
+https://thawing-peak-5317.herokuapp.com/
+
 This application allows you to search for and to add your favorite drinks.
 
 - See a list of all drinks
